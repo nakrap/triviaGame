@@ -95,7 +95,8 @@ $(document).ready(function () {
     $('#reset-btn').show ();
     $('#reset-btn').on ('click', resetGame);
     // setTimeout(playGame, 5000);
-
+    score = 0
+    // scoreResult.text("You got " + score + " questions right.");
   }
 
   
@@ -104,6 +105,7 @@ $(document).ready(function () {
     clearInterval(timerInterval);
     playGame();
     currentAnswerBox.empty();
+    score = 0;
   }
   
 
