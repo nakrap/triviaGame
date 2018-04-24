@@ -12,6 +12,11 @@ var questions = [{
     choices: ["Hewlett Packard", "Apple", "Microsoft", "All of the above"],
     correctAnswer: 3
 }, {
+    question: "Of the 60 billion emails that are sent on a daily basis, what percent are considered spam?",
+    choices: ["68%", "36%", "97%", "82%"],
+    correctAnswer: 2
+
+},{
     question: "How many Snapchat messages are being sent every day?",
     choices: ["1 Billion", "350 Million", "64 Million", "1 Million"],
     correctAnswer: 1
@@ -93,47 +98,38 @@ $(document).ready(function () {
 
   }
 
+  
   function resetGame () {
     timer.empty();
     clearInterval(timerInterval);
     playGame();
+    currentAnswerBox.empty();
   }
   
 
   function setUpBoard() {
 
     for(var i = 0; i < questions.length; i++) {
-      var questionDiv = $('<div>');
-      questionDiv.attr('question', 'question' + i);
-      var currentQuestion = questions[i];
-      var questionBox = $('<p>');
-      questionBox.text(currentQuestion.question);
+        var questionDiv = $('<div>');
+        questionDiv.attr('question', 'question' + i);
+        var currentQuestion = questions[i];
+        var questionBox = $('<p>');
+        questionBox.text(currentQuestion.question);
 
-      var answersBox = $('<div>');
+        var answersBox = $('<div>');
 
-      for(var j = 0; j < currentQuestion.choices.length; j++) {
+    for(var j = 0; j < currentQuestion.choices.length; j++) {
         var currentAnswerChoice = currentQuestion.choices[j];
         var currentAnswerBox = $('<input>' + currentAnswerChoice + '</input>');
         currentAnswerBox.attr({type: 'radio',
-                              name: 'answer' + i,
-                              id: 'radios',
-                              answer: currentAnswerChoice});
+                                name: 'answer' + i,
+                                id: 'radios',
+                                answer: currentAnswerChoice});
         answersBox.append(currentAnswerBox);
-      }
-
-      questionDiv.append(questionBox);
-      questionDiv.append(answersBox);
-
-      questionContainer.append(questionDiv);
-
+        }
+        questionDiv.append(questionBox);
+        questionDiv.append(answersBox);
+        questionContainer.append(questionDiv);
     }
-
-
-
-
   }
-
-
-
-
 });
