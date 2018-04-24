@@ -2,12 +2,22 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: auto;
     text-align: center;
+    text-shadow:5px 5px 5px black;
+    color: white;
+    line-height: 200%;
+    background-image: url('../images/maxresdefault.jpg');
 }
 
 #start-btn {
     margin-top: 20px;
     margin-bottom: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
+
+#start-btn:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 
 #timer {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -66,4 +76,10 @@ button:hover {
 #questionArea {
     margin-top: 40px;
     padding-bottom: 40px;
+    background: none;
+}
+
+body {
+    line-height: 200%;
+    background-image: url('../images/old_wall.png');
 }
