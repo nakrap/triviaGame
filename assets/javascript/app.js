@@ -49,7 +49,7 @@ $(document).ready(function () {
   }
 
   function playGame() {
-    clock = 10;
+    clock = 60;
       questionContainer.empty();
 
     setUpBoard();
@@ -88,11 +88,15 @@ $(document).ready(function () {
     questionContainer.append(scoreResult);
 
     $('#reset-btn').show ();
-    $('#reset-btn').on ('click', playGame);
+    $('#reset-btn').on ('click', resetGame);
     // setTimeout(playGame, 5000);
 
-    
+  }
 
+  function resetGame () {
+    timer.empty();
+    clearInterval(timerInterval);
+    playGame();
   }
   
 
@@ -112,6 +116,7 @@ $(document).ready(function () {
         var currentAnswerBox = $('<input>' + currentAnswerChoice + '</input>');
         currentAnswerBox.attr({type: 'radio',
                               name: 'answer' + i,
+                              id: 'radios',
                               answer: currentAnswerChoice});
         answersBox.append(currentAnswerBox);
       }

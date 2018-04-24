@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Social Media Trivia</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
@@ -14,11 +15,21 @@
 
 
 <body>
-    <p id="timer"></p>
 
-    <button type="button" id="start-btn">Play Game</button>
-    <div id="questionArea"></div>
-    <button type="reset" value="Reset" id="reset-btn">Reset</button>
+        <div class="jumbotron">
+            <h1>Social Media Trivia!</h1>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button" id="start-btn">Play Game</a></p>
+            <p><a class="btn btn-danger btn-md" href="#" role="button" type="reset" value="Reset" id="reset-btn">Reset</a></p>
+            <p id="timer"></p>
+        </div>
+
+        <div id="questionArea">
+            <section class="container">
+                <div class="row" class="clearfix visible-xs">
+                    <div class="col-lg-12">
+                    </div>
+                </div>
+            </section>
 
 
 
