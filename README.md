@@ -18,8 +18,8 @@ Deployment:
 https://nakrap.github.io/triviaGame/
 
 Built With:
-HTML
-CSS
-Bootstrap
-Javascript
+HTML,
+CSS,
+Bootstrap,
+Javascript,
 JQuery
