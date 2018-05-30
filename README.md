@@ -20,14 +20,15 @@ By clicking the start button, the quiz appears, and the timer begins. Quiz answe
 
 
 ## Deployment:
-```
+
 https://nakrap.github.io/triviaGame/
-```
+
 
 ## Built With:
-
+```
 HTML,
 CSS,
 Bootstrap,
 Javascript,
 JQuery
+```
